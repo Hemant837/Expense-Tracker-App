@@ -1,5 +1,8 @@
 let items = document.getElementById("items-group");
 let item = document.createElement("li");
+
+// Add Expense
+
 function addExpense(event) {
   event.preventDefault();
   let expenseAmount = document.getElementById("expenseAmount").value;
@@ -20,12 +23,12 @@ function addExpense(event) {
   let item = document.createElement("li");
   let text = `Expense Amount: ${expenseAmount} Description: ${description} Category: ${category}`;
 
-  // Task 3 - Add a delete buton and delete functionality
+  // Add a delete buton and delete functionality
   let deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
   deleteButton.className = "deleteButton";
 
-  // Task 4 - Add Edit button and Edit functionality
+  // Add Edit button and Edit functionality
 
   let editButton = document.createElement("button");
   editButton.textContent = "Edit";
@@ -47,6 +50,8 @@ function addExpense(event) {
   document.getElementById("category").valuse = "";
 }
 
+// Delete button function
+
 function deleteUser(event) {
   if (event.target.classList.contains("deleteButton")) {
     if (confirm("Are You Sure?")) {
@@ -58,7 +63,7 @@ function deleteUser(event) {
   }
 }
 
-// Task 4 - Edit button function
+// Edit button function
 
 function editUser(event) {
   if (event.target.classList.contains("editButton")) {
